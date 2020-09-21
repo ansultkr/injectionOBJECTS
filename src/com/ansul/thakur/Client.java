@@ -10,5 +10,7 @@ public class Client {
 		Student s =context.getBean("stud", Student.class);
 		s.cheating();
 		
+		AnotherStudent as =context.getBean("anotherstud",AnotherStudent.class);
+		as.startCheating();
 	}
 }
