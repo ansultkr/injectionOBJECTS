@@ -4,18 +4,16 @@
 	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation = "http://www.springframework.org/schema/beans
 					http://www.springframework.org/schema/beans/spring-beans.xsd">
-					
+
+<bean id="mathCheatObjectValue" class= "com.ansul.thakur.MathCheat"></bean>	
+				
 <bean id="stud" class = "com.ansul.thakur.Student">
 	<property name="id" value="1001"/>
-	<property name="mathCheat">
-		<bean class="com.ansul.thakur.MathCheat"></bean>
-	</property>
+	<property name="mathCheat" ref="mathCheatObjectValue"/>
 </bean>
 
 <bean id = "anotherstud" class="com.ansul.thakur.AnotherStudent">
-	<property name="cheat">
-		<bean class="com.ansul.thakur.MathCheat"/>
-	</property>
+	<property name="cheat" ref="mathCheatObjectValue"/>
 </bean>
 
 </beans>
